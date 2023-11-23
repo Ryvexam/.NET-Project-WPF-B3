@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+	<ItemGroup>
+	<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+	<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+	<PackageReference Include="SharpVectors" Version="1.8.2" />
+    </ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Translations\Dict.resx">
+	    <Generator>PublicResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Dict.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Translations\Dict.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Dict.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Assets\add-user.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Assets\add-user.svg" />
+	  <Resource Include="Assets\add-user.svg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
+	  <None Remove="Assets\cancel.svg" />
+	  <Resource Include="Assets\cancel.svg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
+	  <None Remove="Assets\delete-user.svg" />
+	  <Resource Include="Assets\delete-user.svg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
+	  <None Remove="Assets\edit-user.svg" />
+	  <Resource Include="Assets\edit-user.svg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
+	  <None Remove="Assets\save.svg" />
+	  <Resource Include="Assets\save.svg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
+	  <None Remove="Assets\user.svg" />
+	  <None Remove="Assets\enable-user.svg" />
+	  <Resource Include="Assets\enable-user.svg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
+	</ItemGroup>
+</Project>

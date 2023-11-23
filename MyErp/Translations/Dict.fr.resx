@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="AddClient" xml:space="preserve">
+        <value>Ajouter un Client</value>
+    </data>
+    <data name="DeleteClient" xml:space="preserve">
+        <value>Supprimer un Client</value>
+    </data>
+    <data name="DisableClient" xml:space="preserve">
+        <value>Désactiver un Client</value>
+    </data>
+    <data name="EditClient" xml:space="preserve">
+        <value>Editer un Client</value>
+    </data>
+    <data name="ShowIsDisable" xml:space="preserve">
+        <value>Afficher les Clients désactivés</value>
+    </data>
+    <data name="SaveChanges" xml:space="preserve">
+        <value>Sauvegarder les Changements</value>
+    </data>
+    <data name="CancelChanges" xml:space="preserve">
+        <value>Annuler les Changements</value>
+    </data>
+    <data name="EnableClient" xml:space="preserve">
+        <value>Activer le Client</value>
+    </data>
+    <data name="ClientDetails" xml:space="preserve">
+        <value>Détails du Client</value>
+    </data>
+    <data name="Title" xml:space="preserve">
+        <value>Gestionnaire de Clients</value>
+    </data>
+    <data name="LastName" xml:space="preserve">
+        <value>Nom de Famille</value>
+    </data>
+    <data name="FirstName" xml:space="preserve">
+        <value>Prénom</value>
+    </data>
+    <data name="FullName" xml:space="preserve">
+        <value>Nom Prénom</value>
+    </data>
+    <data name="CompanyName" xml:space="preserve">
+        <value>Dénomination de l'entreprise</value>
+    </data>
+    <data name="SiretNumber" xml:space="preserve">
+        <value>Numéro de SIRET</value>
+    </data>
+    <data name="CreatedDate" xml:space="preserve">
+        <value>Date de Création</value>
+    </data>
+    <data name="PostalCode" xml:space="preserve">
+        <value>Code Postal</value>
+    </data>
+    <data name="City" xml:space="preserve">
+        <value>Ville</value>
+    </data>
+    <data name="PhoneNumber" xml:space="preserve">
+        <value>Numéro de Téléphone</value>
+    </data>
+    <data name="Status" xml:space="preserve">
+        <value>Actif</value>
+    </data>
+    <data name="isActif" xml:space="preserve">
+        <value>Activé</value>
+    </data>
+    <data name="isNotActif" xml:space="preserve">
+        <value>Désactivé</value>
+    </data>
+</root>
