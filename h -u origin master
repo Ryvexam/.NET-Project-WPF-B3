@@ -1,0 +1,354 @@
+[33mcommit da05ccb5331172a1564b8d67d02a0897d0bd073b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Ryvexam <maximevery@ryvexam.fr>
+Date:   Thu Nov 23 10:25:10 2023 +0100
+
+    Ton message de commit
+
+[1mdiff --git a/.idea/.gitignore b/.idea/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..13566b8[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/.gitignore[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m# Default ignored files[m
+[32m+[m[32m/shelf/[m
+[32m+[m[32m/workspace.xml[m
+[32m+[m[32m# Editor-based HTTP Client requests[m
+[32m+[m[32m/httpRequests/[m
+[32m+[m[32m# Datasource local storage ignored files[m
+[32m+[m[32m/dataSources/[m
+[32m+[m[32m/dataSources.local.xml[m
+[1mdiff --git a/.idea/.idea.MyErp/.idea/.gitignore b/.idea/.idea.MyErp/.idea/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f76f0bb[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/.idea.MyErp/.idea/.gitignore[m
+[36m@@ -0,0 +1,13 @@[m
+[32m+[m[32m# Default ignored files[m
+[32m+[m[32m/shelf/[m
+[32m+[m[32m/workspace.xml[m
+[32m+[m[32m# Rider ignored files[m
+[32m+[m[32m/modules.xml[m
+[32m+[m[32m/projectSettingsUpdater.xml[m
+[32m+[m[32m/.idea.MyErp.iml[m
+[32m+[m[32m/contentModel.xml[m
+[32m+[m[32m# Editor-based HTTP Client requests[m
+[32m+[m[32m/httpRequests/[m
+[32m+[m[32m# Datasource local storage ignored files[m
+[32m+[m[32m/dataSources/[m
+[32m+[m[32m/dataSources.local.xml[m
+[1mdiff --git a/.idea/.idea.MyErp/.idea/indexLayout.xml b/.idea/.idea.MyErp/.idea/indexLayout.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7b08163[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/.idea.MyErp/.idea/indexLayout.xml[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="UserContentModel">[m
+[32m+[m[32m    <attachedFolders />[m
+[32m+[m[32m    <explicitIncludes />[m
+[32m+[m[32m    <explicitExcludes />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/.idea.MyErp/.idea/inspectionProfiles/Project_Default.xml b/.idea/.idea.MyErp/.idea/inspectionProfiles/Project_Default.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7cce8a5[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/.idea.MyErp/.idea/inspectionProfiles/Project_Default.xml[m
+[36m@@ -0,0 +1,20 @@[m
+[32m+[m[32m<component name="InspectionProjectProfileManager">[m
+[32m+[m[32m  <profile version="1.0">[m
+[32m+[m[32m    <option name="myName" value="Project Default" />[m
+[32m+[m[32m    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">[m
+[32m+[m[32m      <option name="ignoredErrors">[m
+[32m+[m[32m        <list>[m
+[32m+[m[32m          <option value="N802" />[m
+[32m+[m[32m          <option value="N803" />[m
+[32m+[m[32m        </list>[m
+[32m+[m[32m      </option>[m
+[32m+[m[32m    </inspection_tool>[m
+[32m+[m[32m    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">[m
+[32m+[m[32m      <option name="ignoredIdentifiers">[m
+[32m+[m[32m        <list>[m
+[32m+[m[32m          <option value="_random.random.Random" />[m
+[32m+[m[32m        </list>[m
+[32m+[m[32m      </option>[m
+[32m+[m[32m    </inspection_tool>[m
+[32m+[m[32m  </profile>[m
+[32m+[m[32m</component>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/.name b/.idea/.name[m
+[1mnew file mode 100644[m
+[1mindex 0000000..30c5592[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/.name[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mClientDB.json[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7cce8a5[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/inspectionProfiles/Project_Default.xml[m
+[36m@@ -0,0 +1,20 @@[m
+[32m+[m[32m<component name="InspectionProjectProfileManager">[m
+[32m+[m[32m  <profile version="1.0">[m
+[32m+[m[32m    <option name="myName" value="Project Default" />[m
+[32m+[m[32m    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">[m
+[32m+[m[32m      <option name="ignoredErrors">[m
+[32m+[m[32m        <list>[m
+[32m+[m[32m          <option value="N802" />[m
+[32m+[m[32m          <option value="N803" />[m
+[32m+[m[32m        </list>[m
+[32m+[m[32m      </option>[m
+[32m+[m[32m    </inspection_tool>[m
+[32m+[m[32m    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">[m
+[32m+[m[32m      <option name="ignoredIdentifiers">[m
+[32m+[m[32m        <list>[m
+[32m+[m[32m          <option value="_random.random.Random" />[m
+[32m+[m[32m        </list>[m
+[32m+[m[32m      </option>[m
+[32m+[m[32m    </inspection_tool>[m
+[32m+[m[32m  </profile>[m
+[32m+[m[32m</component>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/php.xml b/.idea/php.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f324872[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/php.xml[m
+[36m@@ -0,0 +1,19 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="MessDetectorOptionsConfiguration">[m
+[32m+[m[32m    <option name="transferred" value="true" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="PHPCSFixerOptionsConfiguration">[m
+[32m+[m[32m    <option name="transferred" value="true" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="PHPCodeSnifferOptionsConfiguration">[m
+[32m+[m[32m    <option name="highlightLevel" value="WARNING" />[m
+[32m+[m[32m    <option name="transferred" value="true" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="PhpStanOptionsConfiguration">[m
+[32m+[m[32m    <option name="transferred" value="true" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="PsalmOptionsConfiguration">[m
+[32m+[m[32m    <option name="transferred" value="true" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/MyErp.sln b/MyErp.sln[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b9156fe[m
+[1m--- /dev/null[m
+[1m+++ b/MyErp.sln[m
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32m﻿[m
+[32m+[m[32mMicrosoft Visual Studio Solution File, Format Version 12.00[m
+[32m+[m[32m# Visual Studio Version 17[m
+[32m+[m[32mVisualStudioVersion = 17.3.32825.248[m
+[32m+[m[32mMinimumVisualStudioVersion = 10.0.40219.1[m
+[32m+[m[32mProject("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyErp", "MyErp\MyErp.csproj", "{933DCC50-0F8C-40CD-9734-6F45D91C086D}"[m
+[32m+[m[32mEndProject[m
+[32m+[m[32mGlobal[m
+[32m+[m	[32mGlobalSection(SolutionConfigurationPlatforms) = preSolution[m
+[32m+[m		[32mDebug|Any CPU = Debug|Any CPU[m
+[32m+[m		[32mRelease|Any CPU = Release|Any CPU[m
+[32m+[m	[32mEndGlobalSection[m
+[32m+[m	[32mGlobalSection(ProjectConfigurationPlatforms) = postSolution[m
+[32m+[m		[32m{933DCC50-0F8C-40CD-9734-6F45D91C086D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU[m
+[32m+[m		[32m{933DCC50-0F8C-40CD-9734-6F45D91C086D}.Debug|Any CPU.Build.0 = Debug|Any CPU[m
+[32m+[m		[32m{933DCC50-0F8C-40CD-9734-6F45D91C086D}.Release|Any CPU.ActiveCfg = Release|Any CPU[m
+[32m+[m		[32m{933DCC50-0F8C-40CD-9734-6F45D91C086D}.Release|Any CPU.Build.0 = Release|Any CPU[m
+[32m+[m	[32mEndGlobalSection[m
+[32m+[m	[32mGlobalSection(SolutionProperties) = preSolution[m
+[32m+[m		[32mHideSolutionNode = FALSE[m
+[32m+[m	[32mEndGlobalSection[m
+[32m+[m	[32mGlobalSection(ExtensibilityGlobals) = postSolution[m
+[32m+[m		[32mSolutionGuid = {9A1E21A0-8F17-4555-9B9B-E20AA3D36307}[m
+[32m+[m	[32mEndGlobalSection[m
+[32m+[m[32mEndGlobal[m
+[1mdiff --git a/MyErp.sln.DotSettings.user b/MyErp.sln.DotSettings.user[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b192b9a[m
+[1m--- /dev/null[m
+[1m+++ b/MyErp.sln.DotSettings.user[m
+[36m@@ -0,0 +1,7 @@[m
+[32m+[m[32m﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">[m
+[32m+[m	[32m<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=MyErp_002FTranslations_002FDict/@EntryIndexedValue">True</s:Boolean>[m
+[32m+[m	[32m<s:String x:Key="/Default/ResxEditorPersonal/DisabledLanguages/@EntryValue"></s:String>[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m	[32m<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>[m
+[32m+[m	[32m<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowOnlyStringResources/@EntryValue">False</s:Boolean></wpf:ResourceDictionary>[m
+\ No newline at end of file[m
+[1mdiff --git a/MyErp/App.xaml b/MyErp/App.xaml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b57ed55[m
+[1m--- /dev/null[m
+[1m+++ b/MyErp/App.xaml[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m﻿<Application x:Class="MyErp.App"[m
+[32m+[m[32m             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"[m
+[32m+[m[32m             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"[m
+[32m+[m[32m             xmlns:local="clr-namespace:MyErp"[m
+[32m+[m[32m             StartupUri="/Views/MainWindow.xaml">[m
+[32m+[m[32m    <Application.Resources>[m
+[32m+[m[41m         [m
+[32m+[m[32m    </Application.Resources>[m
+[32m+[m[32m</Application>[m
+[1mdiff --git a/MyErp/App.xaml.cs b/MyErp/App.xaml.cs[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d2908bd[m
+[1m--- /dev/null[m
+[1m+++ b/MyErp/App.xaml.cs[m
+[36m@@ -0,0 +1,40 @@[m
+[32m+[m[32m﻿using System;[m
+[32m+[m[32musing System.Collections.Generic;[m
+[32m+[m[32musing System.Configuration;[m
+[32m+[m[32musing System.Data;[m
+[32m+[m[32musing System.Linq;[m
+[32m+[m[32musing System.Threading.Tasks;[m
+[32m+[m[32musing System.Windows;[m
+[32m+[m[32musing Microsoft.Extensions.DependencyInjection;[m
+[32m+[m[32musing MyErp.BusinessLogic;[m
+[32m+[m[32musing MyErp.Repository;[m
+[32m+[m[32musing MyErp.Views;[m
+[32m+[m
+[32m+[m[32mnamespace MyErp[m
+[32m+[m[32m{[m
+[32m+[m[32m    /// <summary>[m
+[32m+[m[32m    /// Interaction logic for App.xaml[m
+[32m+[m[32m    /// </summary>[m
+[32m+[m[32m    public partial class App : Application[m
+[32m+[m[32m    {[m
+[32m+[m[32m        public App()[m
+[32m+[m[32m        {[m
+[32m+[m[32m            ServiceProvider = ConfigureServices();[m
+[32m+[m[32m            this.InitializeComponent();[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        public static IServiceProvider Services => ((App)Current).ServiceProvider;[m
+[32m+[m
+[32m+[m[32m        public IServiceProvider ServiceProvider { get; }[m
+[32m+[m
+[32m+[m[32m        private static IServiceProvider ConfigureServices()[m
+[32m+[m[32m        {[m
+[32m+[m[32m            var services = new ServiceCollection();[m
+[32m+[m[32m            services.AddTransient<MainViewEntities>();[m
+[32m+[m[32m            services.AddTransient<ClientService>();[m
+[32m+[m[32m            services.AddTransient<IClientRepository, JsonFileClientRepository>();[m
+[32m+[m[32m            return services.BuildServiceProvider();[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[1mdiff --git a/MyErp/AssemblyInfo.cs b/MyErp/AssemblyInfo.cs[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8b5504e[m
+[1m--- /dev/null[m
+[1m+++ b/MyErp/AssemblyInfo.cs[m
+[36m@@ -0,0 +1,10 @@[m
+[32m+[m[32musing System.Windows;[m
+[32m+[m
+[32m+[m[32m[assembly: ThemeInfo([m
+[32m+[m[32m    ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located[m
+[32m+[m[32m                                     //(used if a resource is not found in the page,[m
+[32m+[m[32m                                     // or application resource dictionaries)[m
+[32m+[m[32m    ResourceDictionaryLocation.SourceAssembly //where the generic resource dictionary is located[m
+[32m+[m[32m                                              //(used if a resource is not found in the page,[m
+[32m+[m[32m                                              // app, or any theme specific resource dictionaries)[m
+[32m+[m[32m)][m
+[1mdiff --git a/MyErp/Assets/add-user.svg b/MyErp/Assets/add-user.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..923f18f[m
+[1m--- /dev/null[m
+[1m+++ b/MyErp/Assets/add-user.svg[m
+[36m@@ -0,0 +1,12 @@[m
+[32m+[m[32m<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">[m
+[32m+[m
+[32m+[m[32m<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->[m
+[32m+[m[32m<svg width="800px" height="800px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#000000">[m
+[32m+[m
+[32m+[m[32m<g id="SVGRepo_bgCarrier" stroke-width="0"/>[m
+[32m+[m
+[32m+[m[32m<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>[m
+[32m+[m
+[32m+[m[32m<g id="SVGRepo_iconCarrier"> <g id="add-user-7" transform="translate(-2 -2)"> <path id="secondary" fill="#545454" d="M15.29,13.19a6,6,0,0,1-8.58,0A5,5,0,0,0,3,18v1s2,2,8,2,8-2,8-2V18a5,5,0,0,0-3.71-4.81Z"/> <path id="primary" d="M17,5h4M19,3V7" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> <path id="primary-2" data-name="primary" d="M13,3.35A5.8,5.8,0,0,0,11,3a6,6,0,1,0,5.65,8" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> <path id="primary-3" data-name="primary" d="M15.29,13.19A5,5,0,0,1,19,18v1s-2,2-8,2-8-2-8-2V18a5,5,0,0,1,3.71-4.81" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> </g> </g>[m
+[32m+[m
+[32m+[m[32m</svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/MyErp/Assets/cancel.svg b/MyErp/Assets/cancel.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1115111[m
+[1m--- /dev/null[m
+[1m+++ b/MyErp/Assets/cancel.svg[m
+[36m@@ -0,0 +1,12 @@[m
+[32m+[m[32m<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">[m
+[32m+[m
+[32m+[m[32m<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->[m
+[32m+[m[32m<svg fill="#FFFFFF" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-49.6 -49.6 595.20 595.20" xml:space="preserve" stroke="#FFFFFF" stroke-width="24.304">[m
+[32m+[m
+[32m+[m[32m<g id="SVGRepo_bgCarrier" stroke-width="0"/>[m
+[32m+[m
+[32m+[m[32m<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF" stroke-width="0.992"/>[m
+[32m+[m
+[32m+[m[32m<g id="SVGRepo_iconCarrier"> <g> <g> <path d="M248,0C111.168,0,0.256,111.04,0.256,248S111.184,496,248,496c136.832,0,247.744-111.04,247.744-248S384.816,0,248,0z M248,480C120.208,480,16.256,375.92,16.256,248S120.208,16,248,16s231.744,104.08,231.744,232S375.792,480,248,480z"/> </g> </g> <g> <g> <polygon points="336.192,171.2 324.88,159.888 248.176,236.688 171.472,159.888 160.16,171.2 236.88,248 160.16,324.8 171.472,336.112 248.176,259.312 324.88,336.112 336.192,324.8 259.488,248 "/> </g> </g> </g>[m
+[32m+[m
+[32m+[m[32m</svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/MyErp/Assets/delete-user.svg b/MyErp/Assets/delete-user.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9d32fde[m
+[1m--- /dev/null[m
+[1m+++ b/MyErp/Assets/delete-user.svg[m
+[36m@@ -0,0 +1,12 @@[m
+[32m+[m[32m<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">[m
+[32m+[m
+[32m+[m[32m<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->[m
+[32m+[m[32m<svg width="800px" height="800px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" transform="matrix(1, 0, 0, 1, 0, 0)">[m
+[32m+[m
+[32m+[m[32m<g id="SVGRepo_bgCarrier" stroke-width="0"/>[m
+[32m+[m
+[32m+[m[32m<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>[m
+[32m+[m
+[32m+[m[32m<g id="SVGRepo_iconCarrier"> <g id="minus-user-7" transform="translate(-2 -2)"> <path id="secondary" fill="#545454" d="M15.29,13.19a6,6,0,0,1-8.58,0A5,5,0,0,0,3,18v1s2,2,8,2,8-2,8-2V18a5,5,0,0,0-3.71-4.81Z"/> <line id="primary" x2="4" transform="translate(17 5)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> <path id="primary-2" data-name="primary" d="M13,3.35A5.8,5.8,0,0,0,11,3a6,6,0,1,0,6,6" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> <path id="primary-3" data-name="primary" d="M15.29,13.19A5,5,0,0,1,19,18v1s-2,2-8,2-8-2-8-2V18a5,5,0,0,1,3.71-4.81" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> </g> </g>[m
+[32m+[m
+[32m+[m[32m</svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/MyErp/Assets/edit-user.svg b/MyErp/Assets/edit-user.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..aea19b6[m
+[1m--- /dev/null[m
+[1m+++ b/MyErp/Assets/edit-user.svg[m
+[36m@@ -0,0 +1,12 @@[m
+[32m+[m[32m<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">[m
+[32m+[m
+[32m+[m[32m<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->[m
+[32m+[m[32m<svg width="800px" height="800px" viewBox="0 -0.06 20.109 20.109" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF">[m
+[32m+[m
+[32m+[m[32m<g id="SVGRepo_bgCarrier" stroke-width="0"/>[m
+[32m+[m
+[32m+[m[32m<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>[m
+[32m+[m
+[32m+[m[32m<g id="SVGRepo_iconCarrier"> <g id="edit-user-4" transform="translate(-2 -2.016)"> <path id="secondary" fill="#545454" d="M20.71,16.09,15.8,21H13V18.2l4.91-4.91a1,1,0,0,1,1.4,0l1.4,1.4A1,1,0,0,1,20.71,16.09Z"/> <path id="primary" d="M20.71,16.09,15.8,21H13V18.2l4.91-4.91a1,1,0,0,1,1.4,0l1.4,1.4A1,1,0,0,1,20.71,16.09Z" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> <path id="primary-2" data-name="primary" d="M17,9.27A2.44,2.44,0,0,0,17,9a6,6,0,1,0-6.44,6" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> <path id="primary-3" data-name="primary" d="M6.92,13.72A7,7,0,0,0,3,20a1,1,0,0,0,1,1H9" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> </g> </g>[m
+[32m+[m
+[32m+[m[32m</svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/MyErp/Assets/enable-user.svg b/MyErp/Assets/enable-user.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d5e2e5e[m
+[1m--- /dev/null[m
+[1m+++ b/MyErp/Assets/enable-user.svg[m
+[36m@@ -0,0 +1,7 @@[m
+[32m+[m[32m<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">[m
+[32m+[m[32m<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->[m
+[32m+[m[32m<svg width="800px" height="800px" viewBox="-1 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#000000">[m
+[32m+[m[32m<g id="SVGRepo_bgCarrier" stroke-width="0"/>[m
+[32m+[m[32m<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>[m
+[32m+[m[32m<g id="SVGRepo_iconCarrier"> <g id="user-8" transform="translate(-3 -2)"> <path id="secondary" fill="#545454" d="M16.29,13.19a6,6,0,0,1-8.58,0A5,5,0,0,0,4,18a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3,5,5,0,0,0-3.71-4.81Z"/> <path id="primary" d="M7.49,13.25A5,5,0,0,0,4,18a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3,5,5,0,0,0-3.49-4.75" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> <circle id="primary-2" data-name="primary" cx="6" cy="6" r="6" transform="translate(6 3)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> </g> </g>[m
+[32m+[m[32m</svg>[m
+\ No newlin
