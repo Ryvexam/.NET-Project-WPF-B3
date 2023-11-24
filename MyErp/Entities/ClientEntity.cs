@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using MyErp.Base;
+using MyErp.Views;
 
 namespace MyErp.Entities;
 
@@ -15,8 +16,21 @@ public class ClientEntity : ViewEntitiesBase
     private string? _postalCode;
     private string? _phoneNumber;
     private bool _isEnabled;
-    private bool _canBeShown;
+    private bool _shouldShown;
+    private bool _mustShow;
 
+
+    public bool MustShow
+    {
+        get => _mustShow;
+        set => SetProperty(ref _mustShow, value);
+    }
+
+    public bool ShouldShown
+    {
+        get => _shouldShown;
+        set => SetProperty(ref _shouldShown, value);
+    }
 
     public string FullName => $"{LastName} {FirstName}".Trim();
 

@@ -50,18 +50,35 @@ namespace MyErp.BusinessLogic
 
         public ClientEntity CreateClient()
         {
+            var random = new Random();
+
+            var siretNumber = random.Next(100000000, 999999999).ToString() + random.Next(10000,99999).ToString();
+
+            var firstNameArray = new string[] { "Maxime", "Sophie", "Lucas", "Julie", "Thomas", "Marie", "Alexandre", "Camille", "Émilie", "Antoine" };
+            var lastNameArray = new string[] { "VERY", "DUPONT", "MARTIN", "LEFEBVRE", "MOREAU", "PETIT", "ROUX", "DURAND", "SIMON", "LAURENT" };
+            var companyNameArray = new string[] { "RyveWEB", "TechPlus", "InnovSolutions", "WebCreative", "NetEvolve", "CodeStream", "FutureTech", "PixelWizards", "CloudPioneers", "DigitalHorizon" };
+
+
+            var phoneNumber = "06" + random.Next(10000000, 99999999).ToString();
+
+            var year = random.Next(1950, 2023);
+            var month = random.Next(1, 13);
+            var day = random.Next(1, 29);
+            var createdDate = new DateTime(year, month, day);
+
             return new ClientEntity
             {
-                SiretNumber = "91753318400011",
+                SiretNumber = siretNumber,
                 City = "Moulins",
-                CompanyName = "RyveWEB",
-                CreatedDate = new DateTime(2022, 7, 23),
-                FirstName = "Maxime",
-                LastName = "VERY",
+                CompanyName = companyNameArray[random.Next(companyNameArray.Length)] + random.Next(000000,999999).ToString(),
+                CreatedDate = createdDate,
+                FirstName = firstNameArray[random.Next(firstNameArray.Length)]+ random.Next(000000,999999).ToString(),
+                LastName = lastNameArray[random.Next(lastNameArray.Length)],
                 IsEnabled = true,
-                PhoneNumber = "0640380006",
+                PhoneNumber = phoneNumber,
                 PostalCode = "03000"
             };
         }
+
     }
 }

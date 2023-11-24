@@ -22,17 +22,18 @@ namespace MyErp.Views
 {
     internal class MainViewEntities:ViewEntitiesBase
     {
-        public bool ShowDisabledClients { get; set; }
 
         private ClientService _clientService;
         public List<string> AvailableLanguages { get; }
 
-        public ObservableCollection<ClientEntity> Clients { get; }
+        public ObservableCollection<ClientEntity> Clients { get; set; }
 
-        
+
         public RelayCommand AddCommand { get; private set; }
         public RelayCommand DeleteCommand { get; private set; }
         public RelayCommand EnableCommand { get; private set; }
+        public RelayCommand CancelCommand { get; private set; }
+
 
         public RelayCommand SaveCommand { get; private set; }
 
@@ -45,6 +46,9 @@ namespace MyErp.Views
                 SetProperty(ref _selectedClient, value);
                 DeleteCommand.NotifyCanExecuteChanged();
                 EnableCommand.NotifyCanExecuteChanged();
+                CancelCommand.NotifyCanExecuteChanged();
+                _clientService.Save(Clients);
+
                 }
         }
 
@@ -57,8 +61,8 @@ namespace MyErp.Views
             AddCommand = new RelayCommand(OnAdd);
             DeleteCommand = new RelayCommand(OnDelete,CanDelete);
             EnableCommand = new RelayCommand(ChangeStatus,CanDelete);
-
             SaveCommand = new RelayCommand(OnSave);
+            CancelCommand = new RelayCommand(OnCancel);
 
             AvailableLanguages = CultureInfo
                 .GetCultures(CultureTypes.NeutralCultures)
@@ -80,17 +84,26 @@ namespace MyErp.Views
         {
             try
             {
-                ClientEntity newClient = _clientService.CreateClient();
-
-                if (!ClientExists(newClient))
+                _clientService.Save(Clients);
+                try
                 {
-                    Clients.Add(newClient);
-                    _clientService.Save(Clients);
+                    ClientEntity newClient = _clientService.CreateClient();
+                    if (!ClientExists(newClient))
+                    {
+                        Clients.Add(newClient);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Le client existe déjà.");
+                    }
                 }
-                else
+                catch (Exception e)
                 {
                     MessageBox.Show("Le client existe déjà.");
                 }
+
+
+
             }
             catch (Exception e)
             {
@@ -110,6 +123,20 @@ namespace MyErp.Views
             }
         }
 
+        private void OnCancel()
+        {
+            try
+            {
+                _clientService.Save(Clients);
+                Clients = new ObservableCollection<ClientEntity>(_clientService.Load());
+                _clientService.Save(Clients);
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
         private void OnDelete()
         {
             Clients.Remove(_selectedClient);
@@ -142,11 +169,7 @@ namespace MyErp.Views
                 }
             }
         }
-        private Button GetButtonFromCommand(RelayCommand command)
-        {
-            var button = command.GetType().GetField("_button", BindingFlags.NonPublic | BindingFlags.Instance)?.GetValue(command) as Button;
-            return button;
-        }
+
         private bool ClientExists(ClientEntity clientToCheck)
         {
             return Clients.Any(client => client.SiretNumber == clientToCheck.SiretNumber);

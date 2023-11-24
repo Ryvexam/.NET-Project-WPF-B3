@@ -68,14 +68,14 @@
         <Style x:Key="DataGridStyle" TargetType="DataGrid">
             <Setter Property="Margin" Value="10"/>
             <Setter Property="FontSize" Value="12"/>
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
             <Setter Property="HeadersVisibility" Value="Column"/>
             <Setter Property="GridLinesVisibility" Value="None"/>
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
             <Setter Property="VerticalAlignment" Value="Stretch"/>
             <Setter Property="IsReadOnly" Value="True"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="RowBackground" Value="Transparent"/>
+            <Setter Property="Background" Value="WhiteSmoke"/>
+            <Setter Property="RowBackground" Value="WhiteSmoke"/>
 
         </Style>
 
@@ -146,7 +146,7 @@
 
             <Button Command="{Binding DeleteCommand}" Style="{StaticResource ButtonStyle}">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock Text="{x:Static translations:Dict.DeleteClient}" />
+                    <TextBlock Text="{x:Static translations:Dict.DeleteClient}"/>
                     <svgc:SvgViewbox Source="/assets/delete-user.svg" Width="16" Height="16" Margin="5,0,0,0"/>
                 </StackPanel>
             </Button>
@@ -160,7 +160,7 @@
                         <TextBlock.Style>
                             <Style TargetType="TextBlock">
                                 <Setter Property="Text" Value="{x:Static translations:Dict.EnableClient}"/>
-                                <Style.Triggers>
+                                <Style.Triggers >
                                     <DataTrigger Binding="{Binding SelectedClient.IsEnabled}" Value="True">
                                         <Setter Property="Text" Value="{x:Static translations:Dict.DisableClient}"/>
                                     </DataTrigger>
@@ -168,23 +168,36 @@
                             </Style>
                         </TextBlock.Style>
                     </TextBlock>
-                    <svgc:SvgViewbox Source="/assets/enable-user.svg" Width="17" Height="17" Margin="5,0,0,0"/>
+                    <svgc:SvgViewbox Source="/assets/enable-user.svg" Width="16" Height="17" Margin="5,0,0,0"/>
                 </StackPanel>
             </Button>
 
 
 
+            <CheckBox Content="{x:Static translations:Dict.ShowIsDisable}" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Style="{StaticResource CheckBoxStyle}" VerticalAlignment="Center" />
 
-            <CheckBox Content="{x:Static translations:Dict.ShowIsDisable}" IsChecked="{Binding ShowDisabledClients}" Style="{StaticResource CheckBoxStyle}" VerticalAlignment="Center"/>
+
         </StackPanel>
 
-        <DataGrid ColumnWidth="Auto" Grid.Column="0" Grid.Row="1"  SelectedItem="{Binding SelectedClient}" ItemsSource="{Binding Clients}"  Style="{StaticResource DataGridStyle}" AutoGenerateColumns="False" >
+        <DataGrid ColumnWidth="Auto" Grid.Column="0" Grid.Row="1" SelectedItem="{Binding SelectedClient}" ItemsSource="{Binding Clients}"  Style="{StaticResource DataGridStyle}" AutoGenerateColumns="False" >
+            <DataGrid.Resources>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsEnabled}" Value="False">
+                            <Setter Property="Background" Value="LightGray"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding MustShow}" Value="True">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>
             <DataGrid.Columns >
+
                 <DataGridTextColumn Header="{x:Static translations:Dict.CompanyName}" Binding="{Binding CompanyName}" SortDirection="Ascending"/>
                 <DataGridTextColumn Header="{x:Static translations:Dict.CreatedDate}" Binding="{Binding CreatedDate}" />
                 <DataGridTextColumn Header="{x:Static translations:Dict.PostalCode}" Binding="{Binding PostalCode}" />
                 <DataGridTextColumn Header="{x:Static translations:Dict.City}" Binding="{Binding City}" />
-                <DataGridTextColumn Header="{x:Static translations:Dict.Status}" Binding="{Binding IsEnabled}" />
 
             </DataGrid.Columns>
         </DataGrid>
@@ -209,7 +222,8 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <StackPanel Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" >
+                <StackPanel Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" Visibility="{Binding SelectedClient,
+                                    Converter={StaticResource NullToCollapseConverter}}" >
                     <TextBlock Text="{x:Static translations:Dict.ClientDetails}" Style="{StaticResource ClientDetailsTitleTextStyle}"/>
 
                     <TextBlock Style="{StaticResource ClientDetailsTextStyle}">
@@ -259,8 +273,12 @@
                     </TextBlock>
                 </StackPanel>
 
-
-                <Button Grid.Row="10" Grid.Column="0" Content="{x:Static translations:Dict.SaveChanges}" Command="{Binding SaveCommand}" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Stretch"/>
+                <Button Grid.Row="10" Grid.Column="0" Command="{Binding SaveCommand}" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="{x:Static translations:Dict.SaveChanges}" />
+                        <svgc:SvgViewbox Source="/assets/save.svg" Width="16" Height="16" Margin="5,0,0,0"/>
+                    </StackPanel>
+                </Button>
 
                 <ContentControl Grid.Row="1" Grid.RowSpan="9" Grid.Column="1"
                                 Visibility="{Binding SelectedClient,
@@ -274,7 +292,7 @@
                                 <TextBox Text="{Binding CompanyName}" Style="{StaticResource TransparentTextBoxStyle}"/>
                                 <TextBox Text="{Binding LastName}" Style="{StaticResource TransparentTextBoxStyle}"/>
                                 <TextBox Text="{Binding FirstName}" Style="{StaticResource TransparentTextBoxStyle}"/>
-                                <TextBlock Text="{Binding CreatedDate}" Style="{StaticResource ClientDetailsTextStyle}"/>
+                                <DatePicker SelectedDate="{Binding CreatedDate}" Background="Transparent"/>
                                 <TextBox Text="{Binding PostalCode}" Style="{StaticResource TransparentTextBoxStyle}"/>
                                 <TextBox Text="{Binding City}" Style="{StaticResource TransparentTextBoxStyle}"/>
                                 <TextBox Text="{Binding PhoneNumber}" Style="{StaticResource TransparentTextBoxStyle}"/>
@@ -285,8 +303,12 @@
                     </ContentControl.ContentTemplate>
                 </ContentControl>
 
-                <Button Grid.Row="10" Grid.Column="1" Content="{x:Static translations:Dict.CancelChanges}" Command="{Binding CancelChangeCommand}" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Stretch"/>
-
+                <Button Grid.Row="10" Grid.Column="1" Command="{Binding CancelCommand}" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="{x:Static translations:Dict.CancelChanges}" />
+                        <svgc:SvgViewbox Source="/assets/cancel.svg" Width="16" Height="16" Margin="5,0,0,0"/>
+                    </StackPanel>
+                </Button>
             </Grid>
 
         </Border>
