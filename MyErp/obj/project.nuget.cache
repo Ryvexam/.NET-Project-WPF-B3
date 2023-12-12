@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "j5Y35gAVsWP9MWw5ReZMJAeMSVxI8Ix4S2X2490yToUEcphfL0+A1AEp2NwJV7Uk8DQ8lcpUC/dISTQe4zqeIg==",
+  "dgSpecHash": "RVi8CFbWvm/6irQSvLTCnE1H/q6jjPNTEZ9cyq0KVqTzQrABUfwodzZREKt6BU9yhdf21VQSaqgINKWonc77Xw==",
   "success": true,
-  "projectFilePath": "D:\\Developpement\\Projets\\.net\\MyErp\\MyErp\\MyErp.csproj",
+  "projectFilePath": "C:\\Users\\Ryvexam\\RiderProjects\\.NET-Project-WPF-B3\\MyErp\\MyErp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Maxime\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
-    "C:\\Users\\Maxime\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
-    "C:\\Users\\Maxime\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\Maxime\\.nuget\\packages\\sharpvectors\\1.8.2\\sharpvectors.1.8.2.nupkg.sha512"
+    "C:\\Users\\Ryvexam\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
+    "C:\\Users\\Ryvexam\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\Ryvexam\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Ryvexam\\.nuget\\packages\\sharpvectors\\1.8.2\\sharpvectors.1.8.2.nupkg.sha512"
   ],
   "logs": []
 }

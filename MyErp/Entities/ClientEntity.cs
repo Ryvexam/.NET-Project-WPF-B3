@@ -18,8 +18,9 @@ public class ClientEntity : ViewEntitiesBase
     private bool _isEnabled;
     private bool _shouldShown;
     private bool _mustShow;
+    private string _libelle;
 
-
+    
     public bool MustShow
     {
         get => _mustShow;
@@ -32,14 +33,15 @@ public class ClientEntity : ViewEntitiesBase
         set => SetProperty(ref _shouldShown, value);
     }
 
-    public string FullName => $"{LastName} {FirstName}".Trim();
-
+    public string FullName => LastName +" "+ FirstName;
+    
+    public string Libelle => string.IsNullOrEmpty(CompanyName) ? FullName : CompanyName;
     public string SiretNumber
     {
         get => _siretNumber;
         set => SetProperty(ref _siretNumber, value);
     }
-    public string CompanyName
+    public string? CompanyName
     {
         get => _companyName;
         set => SetProperty(ref _companyName, value);

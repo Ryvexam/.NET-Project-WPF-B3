@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyErp")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute(" ")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc2fbf03c05eeb79a9ccbc2ba899f7ebb8858c4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyErp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyErp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Developpement\\Projets\\.net\\MyErp\\MyErp\\MyErp.csproj": {}
+    "C:\\Users\\Ryvexam\\RiderProjects\\.NET-Project-WPF-B3\\MyErp\\MyErp.csproj": {}
   },
   "projects": {
-    "D:\\Developpement\\Projets\\.net\\MyErp\\MyErp\\MyErp.csproj": {
+    "C:\\Users\\Ryvexam\\RiderProjects\\.NET-Project-WPF-B3\\MyErp\\MyErp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Developpement\\Projets\\.net\\MyErp\\MyErp\\MyErp.csproj",
+        "projectUniqueName": "C:\\Users\\Ryvexam\\RiderProjects\\.NET-Project-WPF-B3\\MyErp\\MyErp.csproj",
         "projectName": "MyErp",
-        "projectPath": "D:\\Developpement\\Projets\\.net\\MyErp\\MyErp\\MyErp.csproj",
-        "packagesPath": "C:\\Users\\Maxime\\.nuget\\packages\\",
-        "outputPath": "D:\\Developpement\\Projets\\.net\\MyErp\\MyErp\\obj\\",
+        "projectPath": "C:\\Users\\Ryvexam\\RiderProjects\\.NET-Project-WPF-B3\\MyErp\\MyErp.csproj",
+        "packagesPath": "C:\\Users\\Ryvexam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ryvexam\\RiderProjects\\.NET-Project-WPF-B3\\MyErp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Maxime\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Ryvexam\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0-windows"
+          "net8.0-windows"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0-windows7.0": {
-            "targetAlias": "net7.0-windows",
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net7.0-windows7.0": {
-          "targetAlias": "net7.0-windows",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
           "dependencies": {
             "CommunityToolkit.Mvvm": {
               "target": "Package",
@@ -44,7 +44,7 @@
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[8.0.0, )"
             },
             "SharpVectors": {
               "target": "Package",
@@ -70,7 +70,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Maxime\\.dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\Ryvexam\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

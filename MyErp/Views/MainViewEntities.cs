@@ -22,6 +22,13 @@ namespace MyErp.Views
 {
     internal class MainViewEntities:ViewEntitiesBase
     {
+        private bool? _editMode;
+        public bool? EditMode
+        {
+            get => _editMode;
+            set => SetProperty(ref _editMode, value);
+        }
+
 
         private ClientService _clientService;
         public List<string> AvailableLanguages { get; }
@@ -33,6 +40,7 @@ namespace MyErp.Views
         public RelayCommand DeleteCommand { get; private set; }
         public RelayCommand EnableCommand { get; private set; }
         public RelayCommand CancelCommand { get; private set; }
+        public RelayCommand EditCommand { get; private set; }
 
 
         public RelayCommand SaveCommand { get; private set; }
@@ -43,19 +51,20 @@ namespace MyErp.Views
             get => _selectedClient;
             set
             {
+                EditMode = null;
                 SetProperty(ref _selectedClient, value);
                 DeleteCommand.NotifyCanExecuteChanged();
                 EnableCommand.NotifyCanExecuteChanged();
                 CancelCommand.NotifyCanExecuteChanged();
+                EditCommand.NotifyCanExecuteChanged();
                 _clientService.Save(Clients);
 
                 }
         }
 
+
         public MainViewEntities(ClientService clientService)
         {
-
-
             _clientService = clientService;
 
             AddCommand = new RelayCommand(OnAdd);
@@ -63,6 +72,7 @@ namespace MyErp.Views
             EnableCommand = new RelayCommand(ChangeStatus,CanDelete);
             SaveCommand = new RelayCommand(OnSave);
             CancelCommand = new RelayCommand(OnCancel);
+            EditCommand = new RelayCommand(OnEdit,CanEdit);
 
             AvailableLanguages = CultureInfo
                 .GetCultures(CultureTypes.NeutralCultures)
@@ -72,7 +82,6 @@ namespace MyErp.Views
             Clients = new ObservableCollection<ClientEntity>(_clientService.Load());
 
 
-
             ICollectionView collectionView = CollectionViewSource.GetDefaultView(Clients);
             if (collectionView != null)
             {
@@ -80,16 +89,31 @@ namespace MyErp.Views
             }
         }
 
+
+        private void OnEdit()
+        {
+            if (EditMode != null)
+            {
+                EditMode = null;
+            }
+            else
+            {
+                EditMode = true;
+            }
+        }
+        
         private void OnAdd()
         {
             try
             {
+
                 _clientService.Save(Clients);
                 try
                 {
                     ClientEntity newClient = _clientService.CreateClient();
                     if (!ClientExists(newClient))
                     {
+                        SelectedClient = null;
                         Clients.Add(newClient);
                     }
                     else
@@ -149,7 +173,10 @@ namespace MyErp.Views
                 MessageBox.Show(e.Message);
             }
         }
-
+        private bool CanEdit()
+        {
+            return _selectedClient != null ;
+        }
         private bool CanDelete()
         {
             return _selectedClient != null ;

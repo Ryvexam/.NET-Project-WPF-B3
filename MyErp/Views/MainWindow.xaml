@@ -16,7 +16,6 @@
 
     <Window.Resources>
 
-        <base:BindingProxy x:Key ="mainProxy" Data="{Binding Path=.}" />
         <converters:NullToCollapseConverter x:Key="NullToCollapseConverter"/>
 
         <Style x:Key="TransparentTextBoxStyle" TargetType="TextBox">
@@ -194,7 +193,7 @@
             </DataGrid.Resources>
             <DataGrid.Columns >
 
-                <DataGridTextColumn Header="{x:Static translations:Dict.CompanyName}" Binding="{Binding CompanyName}" SortDirection="Ascending"/>
+                <DataGridTextColumn Header="{x:Static translations:Dict.CompanyName}" Binding="{Binding Libelle}" SortDirection="Ascending"/>
                 <DataGridTextColumn Header="{x:Static translations:Dict.CreatedDate}" Binding="{Binding CreatedDate}" />
                 <DataGridTextColumn Header="{x:Static translations:Dict.PostalCode}" Binding="{Binding PostalCode}" />
                 <DataGridTextColumn Header="{x:Static translations:Dict.City}" Binding="{Binding City}" />
@@ -202,7 +201,8 @@
             </DataGrid.Columns>
         </DataGrid>
 
-    <Border Grid.Row="1" Grid.Column="1" Padding="10">
+    <Border Grid.Row="1" Grid.Column="1" Padding="10" Visibility="{Binding EditMode,
+                                    Converter={StaticResource NullToCollapseConverter}}">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -222,7 +222,7 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <StackPanel Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" Visibility="{Binding SelectedClient,
+                <StackPanel Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" Visibility="{Binding EditMode,
                                     Converter={StaticResource NullToCollapseConverter}}" >
                     <TextBlock Text="{x:Static translations:Dict.ClientDetails}" Style="{StaticResource ClientDetailsTitleTextStyle}"/>
 
