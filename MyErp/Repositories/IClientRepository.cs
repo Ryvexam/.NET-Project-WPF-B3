@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyErp.Repository
+namespace MyErp.Repositories
 {
     public interface IClientRepository
     {

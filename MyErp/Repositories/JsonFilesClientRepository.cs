@@ -7,7 +7,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using MyErp.Entities;
 
-namespace MyErp.Repository
+namespace MyErp.Repositories
 {
     internal class JsonFileClientRepository : IClientRepository
     {

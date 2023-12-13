@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
 using MyErp.Entities;
-using MyErp.Repository;
+using MyErp.Repositories;
 
 namespace MyErp.BusinessLogic
 {
@@ -19,33 +19,51 @@ namespace MyErp.BusinessLogic
 
         public void Save(IList<ClientEntity> clients)
         {
+            
             if (clients.Any(x => string.IsNullOrEmpty(x.CompanyName) && string.IsNullOrEmpty(x.FullName)))
-                throw new Exception("Un Client doit avoir soit un nom d'entreprise soit Nom-Prénom.");
-
-            if (clients.Where(x => !string.IsNullOrEmpty(x.CompanyName))
-                    .DistinctBy(x => x.CompanyName)
-                    .Count() != clients.Count(cl => !string.IsNullOrEmpty(cl.CompanyName)))
-            {
-                throw new Exception("Une entreprise avec le même nom existe déjà.");
-            }
-
+                throw new Exception("Un Client doit avoir soit un nom d'entreprise soit Nom-Prénom");
+            
+            
             if (clients.Any(x => string.IsNullOrEmpty(x.FirstName) || string.IsNullOrEmpty(x.LastName)))
             {
                 throw new Exception("Il doit y avoir et un Nom et un Prénom");
             }
             
+            if (clients.Any(x => !string.IsNullOrEmpty(x.PhoneNumber) && !x.PhoneNumber.All(char.IsDigit)))
+                throw new Exception("Un numéro de téléphone doit contenir uniquement des chiffres");
+
+            if (clients.Any(x => x.PostalCode.Length < 5))
+                throw new Exception("Le code postal doit comporter au moins 5 chiffres.");
+            
+            if (clients.Where(x => !string.IsNullOrEmpty(x.CompanyName))
+                    .DistinctBy(x => x.CompanyName)
+                    .Count() != clients.Count(cl => !string.IsNullOrEmpty(cl.CompanyName)))
+            {
+                throw new Exception("Une entreprise avec le même nom existe déjà");
+            }
+            
             if (clients.DistinctBy(x => x.FullName).Count() != clients.Count)
                 throw new Exception("Une personne avec le même Nom-Prénom existe déja.");
+            
+            if (clients.DistinctBy(x => x.SiretNumber).Count() != clients.Count)
+                throw new Exception("Un numéro de SIRET déjà existant a été détecté");
 
+           
+            if (clients.Any(x => !string.IsNullOrEmpty(x.CompanyName) && string.IsNullOrEmpty(x.SiretNumber)))
+                throw new Exception("Un numéro de SIRET est requis lorsque l'entreprise à un nom");
+
+            if (clients.Any(x => !string.IsNullOrEmpty(x.SiretNumber) && x.SiretNumber.Length != 14))
+                throw new Exception("Le numéro de SIRET doit etre composé de 14 Chiffres");
+            
             if (clients.Any(x => x.PostalCode.Length > 10))
                 throw new Exception("Le code postal doit comporter au maximum 10 caractères.");
 
-            if (clients.Any(x => string.IsNullOrEmpty(x.CompanyName) && string.IsNullOrEmpty(x.SiretNumber)))
-                throw new Exception("Un numéro de SIRET est requis lorsque l'entreprise à un nom");
-
-            if (clients.Any(x => string.IsNullOrEmpty(x.SiretNumber) || x.SiretNumber.Length != 14))
-                throw new Exception("Le numéro de SIRET doit etre composé de 14 Chiffres");
-
+            if (clients.Any(x => x.CreatedDate > DateTime.Now))
+                throw new Exception("La date de création ne peut pas être dans le futur");
+            
+            if (clients.Any(x => string.IsNullOrEmpty(x.City)))
+                throw new Exception("Le nom de la ville est requis");
+            
             if (clients.Any(x => !string.IsNullOrEmpty(x.PhoneNumber) && (x.PhoneNumber.Length != 10 || !x.PhoneNumber.StartsWith("0"))))
                 throw new Exception("Un numéro de téléphone commence OBLIGATOIREMENT par 0 et contient 10 chiffres");
 
